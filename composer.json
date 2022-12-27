@@ -5,10 +5,10 @@
     },
     "scripts": {
 		"phpcs": [
-			"./vendor/bin/phpcs --runtime-set installed_paths ./vendor/wp-coding-standards/wpcs"
+			"./vendor/bin/phpcs -d memory_limit=256M"
 		]
 	},
-	"scripts-descriptions": {
-		"lint": "Run the PHPCS script against the entire codebase."
-	}
+    "post-install-cmd": [
+        "./vendor/bin/phpcs --config-set installed_paths /var/www/html/vendor/wp-coding-standards/wpcs/"
+    ]
 }

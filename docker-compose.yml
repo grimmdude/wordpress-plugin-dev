@@ -14,7 +14,7 @@ services:
     platform: linux/x86_64
     
   wordpress:
-    container_name: wordpress
+    container_name: wordpress-plugin-dev
     depends_on:
       - db
     build:
