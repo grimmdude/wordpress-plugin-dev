@@ -1,0 +1,14 @@
+{
+    "require-dev": {
+        "squizlabs/php_codesniffer": "*",
+        "wp-coding-standards/wpcs": "^2.3"
+    },
+    "scripts": {
+		"phpcs": [
+			"./vendor/bin/phpcs --runtime-set installed_paths ./vendor/wp-coding-standards/wpcs"
+		]
+	},
+	"scripts-descriptions": {
+		"lint": "Run the PHPCS script against the entire codebase."
+	}
+}
