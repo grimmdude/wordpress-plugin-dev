@@ -4,7 +4,11 @@ Docker based environment for WordPress plugin development.
 
 ```console
 docker composer up --build -d
-docker exec -it wordpress-plugin-dev composer run phpcs
+```
+
+## Check WordPress Coding Standards
+```console
+docker exec -it wordpress-plugin-dev phpcs wp-content/plugins
 ```
 
 Place plugins in the `/plugins` directory.

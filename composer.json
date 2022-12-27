@@ -1,14 +1,9 @@
 {
     "require-dev": {
         "squizlabs/php_codesniffer": "*",
-        "wp-coding-standards/wpcs": "^2.3"
+        "wp-coding-standards/wpcs": "dev-master"
     },
     "scripts": {
-		"phpcs": [
-			"./vendor/bin/phpcs -d memory_limit=256M"
-		]
-	},
-    "post-install-cmd": [
-        "./vendor/bin/phpcs --config-set installed_paths /var/www/html/vendor/wp-coding-standards/wpcs/"
-    ]
+        "lint": "phpcs"
+    }
 }
