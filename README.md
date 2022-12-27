@@ -6,6 +6,8 @@ Docker based environment for WordPress plugin development.
 docker compose up --build -d
 ```
 
+Access WordPress from your browser at http://localhost:8000
+
 ## Check WordPress Coding Standards
 ```console
 docker exec -it wordpress-plugin-dev phpcs wp-content/plugins
