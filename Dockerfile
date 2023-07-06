@@ -1,6 +1,7 @@
 # WPCS not working with PHP 8 yet...
 # FROM wordpress:latest as base
 FROM wordpress:5.7.2-php7.3-apache as base
+#FROM wordpress:6.2.0-php8.2-apache as base
 
 ENV PATH="${PATH}:/var/www/html/vendor/bin"
 

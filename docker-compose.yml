@@ -11,6 +11,8 @@ services:
       MYSQL_DATABASE: wordpress_local
       MYSQL_USER: wordpress_db_user
       MYSQL_PASSWORD: wordpress_db_password
+    ports:
+      - 4306:3306
     platform: linux/x86_64
     
   wordpress:
@@ -22,6 +24,7 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ./plugins:/var/www/html/wp-content/plugins
+      - ./plugins:/var/www/html/wp-content/themes
     ports:
       - "8000:80"
     restart: always
