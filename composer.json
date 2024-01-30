@@ -1,9 +1,14 @@
 {
     "require-dev": {
         "squizlabs/php_codesniffer": "*",
-        "wp-coding-standards/wpcs": "dev-master"
+        "wp-coding-standards/wpcs": "dev-main"
     },
     "scripts": {
         "lint": "phpcs"
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
     }
 }

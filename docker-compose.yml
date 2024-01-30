@@ -2,7 +2,7 @@ version: "3.9"
     
 services:
   db:
-    image: mysql:5.7
+    image: mysql:8.0
     volumes:
       - db_data:/var/lib/mysql
     restart: always
@@ -24,7 +24,7 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ./plugins:/var/www/html/wp-content/plugins
-      - ./plugins:/var/www/html/wp-content/themes
+      - ../okdork-theme-2023:/var/www/html/wp-content/themes/okdork-theme-2023
     ports:
       - "8000:80"
     restart: always
