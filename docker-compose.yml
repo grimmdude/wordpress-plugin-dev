@@ -5,7 +5,7 @@ services:
     image: mysql:8.0
     volumes:
       - db_data:/var/lib/mysql
-    restart: always
+    restart: "on-failure"
     environment:
       MYSQL_ROOT_PASSWORD: dbpassword
       MYSQL_DATABASE: wordpress_local
@@ -27,7 +27,7 @@ services:
       - ../okdork-theme-2023:/var/www/html/wp-content/themes/okdork-theme-2023
     ports:
       - "8000:80"
-    restart: always
+    restart: "on-failure"
     environment:
       WORDPRESS_DB_HOST: db
       WORDPRESS_DB_USER: wordpress_db_user
